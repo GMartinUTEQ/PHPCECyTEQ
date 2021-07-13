@@ -19,3 +19,8 @@ p{
     color:green;
     text-align: right;
 }
+#EncabezadoID{
+    color:purple;
+    text-decoration: underline;
+    font-size: 45px;
+}
