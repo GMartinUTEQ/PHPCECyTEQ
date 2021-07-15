@@ -1,9 +1,23 @@
 
 alert("Bienvenidos");
 
+var hora;
+hora = new Date();
+hora = hora.getHours();
+var textoBuenos = "";
+if(hora > 5 && hora < 12)
+{
+    textoBuenos = "Buenos días, ";
+}
+else
+{
+    textoBuenos = "Buenas Tardes, ";
+}
+
+
 var nombreCiudad;
 nombreCiudad = prompt("Capture el nombre de la ciudad donde vive");
-document.write("<h1>" + nombreCiudad + "</h1>");
+document.write("<h1>" + textoBuenos + nombreCiudad + "</h1>");
 
 
 
