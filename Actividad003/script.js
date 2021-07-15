@@ -5,13 +5,20 @@ var hora;
 hora = new Date();
 hora = hora.getHours();
 var textoBuenos = "";
-if(hora > 5 && hora < 12)
+if(hora >= 5 && hora < 12)
 {
     textoBuenos = "Buenos días, ";
 }
 else
 {
-    textoBuenos = "Buenas Tardes, ";
+    if(hora >= 20  ||  hora <5)
+    {
+        textoBuenos = "Buenas noches, "
+    }
+    else
+    {
+        textoBuenos = "Buenas Tardes, ";
+    }
 }
 
 
