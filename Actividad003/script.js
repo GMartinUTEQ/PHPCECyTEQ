@@ -13,3 +13,30 @@ function retornarHora()
     var cadena = hora.getHours() + ":" + hora.getMinutes() + ":" + hora.getSeconds();
     return cadena;
 }
+
+/*
+
+POO.
+Class Perro();
+
+{Metodos o funciones}
+Ladar();
+Comer();
+Respirar();
+MoverColita();
+Revolcarse();
+Morder();
+
+{Atributos o propiedades.}
+NumOrejas;
+Color;
+NumPatas;
+TieneCola;
+
+Jake = new Perro();
+ColorJake = Jake.color;
+
+
+
+
+*/
