@@ -1,3 +1,12 @@
+
+alert("Bienvenidos");
+
+var nombreCiudad;
+nombreCiudad = prompt("Capture el nombre de la ciudad donde vive");
+document.write("<h1>" + nombreCiudad + "</h1>");
+
+
+
 function retornarFecha()
 {
     var fecha;
