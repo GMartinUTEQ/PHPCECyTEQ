@@ -47,6 +47,18 @@
         <div class="card">
             <div class="card-header">Ciclo Do While...</div>
             <div class="card-body">
+                <?php
+                    $aleatorio = rand(1, 100);
+                    echo "<h3>Ejercicio que imprime todos los números del 1 al $aleatorio.</h3>";
+                    $incremental = 1;
+                    do
+                    {
+                        echo "$incremental - ";
+                        $incremental ++;
+
+                    }while($incremental <= $aleatorio);
+
+                ?>
             </div>
             <div class="card-footer">Desarrollado por: GMartin</div>
         </div>
