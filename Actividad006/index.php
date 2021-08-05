@@ -12,6 +12,76 @@
             <p>Como trabajar con diferentes tipos de variables.</p>
         </div>
 
+        <div class="card">
+            <div class="card-header">Ejemplo:</div>
+            <div class="card-body">
+                <?php
+                    $dividendo = rand(1, 10);
+                    $divisor = rand(1, 10);
+                    $resultado = 0;
+                    echo "<h2>El dividendo es: $dividendo y el divisor es: $divisor";
+                    if($divisor == 0)
+                    {
+                        echo "<h3>Error: El divisor debe ser mayor a cero</h3>";
+                    }
+                    else
+                    {
+                        if($divisor > $dividendo)
+                        {
+                            echo "<h3>Error: El dividendo debe ser mayor al divisor</h3>";
+                        }
+                        else
+                        {
+                            $resultado = intdiv($dividendo, $divisor);
+                            if($resultado == 1)
+                            {
+                                echo "<h3>El resultado de la división es: UNO</h3>";
+                            }
+                            elseif($resultado == 2)
+                            {
+                                echo "<h3>El resultado de la división es: DOS</h3>";
+                            }
+                            elseif($resultado == 3)
+                            {
+                                echo "<h3>El resultado de la división es: TRES</h3>";
+                            }
+                            elseif($resultado == 4)
+                            {
+                                echo "<h3>El resultado de la división es: CUATRO</h3>";
+                            }
+                            elseif($resultado == 5)
+                            {
+                                echo "<h3>El resultado de la división es: CINCO</h3>";
+                            }
+                            elseif($resultado == 6)
+                            {
+                                echo "<h3>El resultado de la división es: SEIS</h3>";
+                            }
+                            elseif($resultado == 7)
+                            {
+                                echo "<h3>El resultado de la división es: SIETE</h3>";
+                            }
+                            elseif($resultado == 8)
+                            {
+                                echo "<h3>El resultado de la división es: OCHO</h3>";
+                            }
+                            elseif($resultado == 9)
+                            {
+                                echo "<h3>El resultado de la división es: NUEVE</h3>";
+                            }
+                            else
+                            {
+                                echo "<h3>El resultado de la división es: DIEZ</h3>";
+                            }
+                        }
+                    }
+
+                    
+                ?>
+            </div>
+            <div class="card-footer">Desarrollado por: GMartin</div>
+        </div>
+        <br/>
 
         <div class="card">
             <div class="card-header">Ejemplo:</div>
