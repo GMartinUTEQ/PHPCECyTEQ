@@ -12,6 +12,38 @@
             <p>Como trabajar con diferentes tipos de variables.</p>
         </div>
 
+
+        <div class="card">
+            <div class="card-header">Ejemplo:</div>
+            <div class="card-body">
+                <?php
+
+                    $incognita = rand(1, 9999);
+                    echo "<h1>El número incógnita es: $incognita</h1>";
+                    //echo "<h1>El número incógnita es: " . $incognita . "</h1>";
+                    if($incognita < 10)
+                    {
+                        echo "<h1>El número es de 1 dígito</h1>";
+                    }
+                    elseif($incognita >= 10 && $incognita < 100)
+                    {
+                        echo "<h1>El número es de 2 dígitos</h1>";
+                    }
+                    elseif($incognita >= 100 && $incognita < 1000)
+                    {
+                        echo "<h1>El número es de 3 dígitos</h1>";
+                    }
+                    else
+                    {
+                        echo "<h1>El número es de 4 dígitos</h1>";
+                    }
+
+                   
+                ?>
+            </div>
+            <div class="card-footer">Desarrollado por: GMartin</div>
+        </div>
+        <br/>
     
         <div class="card">
             <div class="card-header">Ejemplo:</div>
@@ -30,7 +62,7 @@
             </div>
             <div class="card-footer">Desarrollado por: GMartin</div>
           </div>
-            <br/>
+          <br/>
           <div class="card">
             <div class="card-header">Juego: Adivina Inferior, superior o medio.<a href="index.php">Recargar</a></div>
             <div class="card-body">
