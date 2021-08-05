@@ -16,63 +16,101 @@
             <div class="card-header">Ejemplo:</div>
             <div class="card-body">
                 <?php
-                    $dividendo = rand(1, 10);
-                    $divisor = rand(1, 10);
+                    $dividendo = rand(0, 10);
+                    $divisor = rand(0, 10);
                     $resultado = 0;
-                    echo "<h2>El dividendo es: $dividendo y el divisor es: $divisor";
+                    echo "<h2 class='alert alert-primary'>El dividendo es: $dividendo y el divisor es: $divisor";
                     if($divisor == 0)
                     {
-                        echo "<h3>Error: El divisor debe ser mayor a cero</h3>";
+                        echo "<h3 class='alert alert-danger'>Error: El divisor debe ser mayor a cero</h3>";
                     }
                     else
                     {
                         if($divisor > $dividendo)
                         {
-                            echo "<h3>Error: El dividendo debe ser mayor al divisor</h3>";
+                            echo "<h3 class='alert alert-danger'>Error: El dividendo debe ser mayor al divisor</h3>";
                         }
                         else
                         {
                             $resultado = intdiv($dividendo, $divisor);
-                            if($resultado == 1)
+                            $nel = "";
+                            switch($resultado)
                             {
-                                echo "<h3>El resultado de la división es: UNO</h3>";
+                                case 1:
+                                    $nel = "UNO";
+                                    break;
+                                case 2:
+                                    $nel = "DOS";
+                                    break;
+                                case 3:
+                                    $nel = "TRES";
+                                    break;
+                                case 4:
+                                    $nel = "CUATRO";
+                                    break;
+                                case 5:
+                                    $nel = "CINCO";
+                                    break;
+                                case 6:
+                                    $nel = "SEIS";
+                                    break;
+                                case 7:
+                                    $nel = "SIETE";
+                                    break;
+                                case 8:
+                                    $nel = "OCHO";
+                                    break;
+                                case 9:
+                                    $nel = "NUEVE";
+                                    break;
+                                case 10:
+                                    $nel = "DIEZ";
+                                    break;
+                                
+                            }
+
+                            echo "<h3 class='alert alert-success'>El resultado de la división es: $nel</h3>";
+
+                            /*if($resultado == 1)
+                            {
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: UNO</h3>";
                             }
                             elseif($resultado == 2)
                             {
-                                echo "<h3>El resultado de la división es: DOS</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: DOS</h3>";
                             }
                             elseif($resultado == 3)
                             {
-                                echo "<h3>El resultado de la división es: TRES</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: TRES</h3>";
                             }
                             elseif($resultado == 4)
                             {
-                                echo "<h3>El resultado de la división es: CUATRO</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: CUATRO</h3>";
                             }
                             elseif($resultado == 5)
                             {
-                                echo "<h3>El resultado de la división es: CINCO</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: CINCO</h3>";
                             }
                             elseif($resultado == 6)
                             {
-                                echo "<h3>El resultado de la división es: SEIS</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: SEIS</h3>";
                             }
                             elseif($resultado == 7)
                             {
-                                echo "<h3>El resultado de la división es: SIETE</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: SIETE</h3>";
                             }
                             elseif($resultado == 8)
                             {
-                                echo "<h3>El resultado de la división es: OCHO</h3>";
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: OCHO</h3>";
                             }
                             elseif($resultado == 9)
                             {
-                                echo "<h3>El resultado de la división es: NUEVE</h3>";
+                                echo "<h3  class='alert alert-success'>El resultado de la división es: NUEVE</h3>";
                             }
                             else
                             {
-                                echo "<h3>El resultado de la división es: DIEZ</h3>";
-                            }
+                                echo "<h3 class='alert alert-success'>El resultado de la división es: DIEZ</h3>";
+                            }*/
                         }
                     }
 
