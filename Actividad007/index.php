@@ -17,8 +17,48 @@
     </div>
     <div class="card">
     <div class="card-header">Este es un ejemplo de una tabla</div>
-    <div class="card-body">Content</div> 
-    
+    <div class="card-body">
+    <table>
+            <!-- tr = Table Row -->
+            <tr>
+                <!-- th = Table Header -->
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Semestre
+                </th>
+                <th>
+                    Promedio
+                </th>
+            </tr>
+            <tr>
+                <!-- td = Table Data -->
+                <td>
+                    Juanito
+                </td>
+                <td>
+                    2do
+                </td>
+                <td>
+                    6.0
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Conchita
+                </td>
+                <td>
+                    2do
+                </td>
+                <td>
+                    9.5
+                </td>
+            </tr>
+            
+        </table>
+    </div> 
+        
     </div>
 </div>
 
