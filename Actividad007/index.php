@@ -18,9 +18,9 @@
     <div class="card">
     <div class="card-header">Este es un ejemplo de una tabla</div>
     <div class="card-body">
-    <table>
+    <table class="table table-striped table-hover">
             <!-- tr = Table Row -->
-            <tr>
+            <tr class="table-info">
                 <!-- th = Table Header -->
                 <th>
                     Nombre
