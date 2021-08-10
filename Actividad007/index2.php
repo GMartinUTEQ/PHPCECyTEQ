@@ -26,38 +26,15 @@
                         Marcas de autos
                     </th>
                 </tr>
-                <tr>
-                    <!-- td = Table Data -->
-                    <td>
-                        Mazda
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td = Table Data -->
-                    <td>
-                        Audi
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td = Table Data -->
-                    <td>
-                        Honda
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td = Table Data -->
-                    <td>
-                        Nissan
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td = Table Data -->
-                    <td>
-                        Volkswagen
-                    </td>
-                </tr>
-                
-                
+                <?php
+                    $marcas = array("Mazda", "Audi", "Honda", "Nissan, Volkswagen");
+                    for($i = 0; $i <= 4; $i++)
+                    {
+                        echo '
+                            <tr><td>' . $marcas[$i] . '</td></tr>
+                        ';
+                    }
+                ?>
             </table>
         </div> 
         
