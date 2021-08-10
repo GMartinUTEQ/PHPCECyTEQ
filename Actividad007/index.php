@@ -12,11 +12,14 @@
 <body>
  
 <div class="container">
-  <h2>Ejemplo de tablas en HTML</h2>
-  <div class="card">
+    <div class="jumbotron text-center">
+        <h2>Ejemplo de tablas en HTML</h2>
+    </div>
+    <div class="card">
     <div class="card-header">Este es un ejemplo de una tabla</div>
     <div class="card-body">Content</div> 
-  </div>
+    
+    </div>
 </div>
 
 </body>
