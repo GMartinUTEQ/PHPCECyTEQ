@@ -27,7 +27,7 @@
                     </th>
                 </tr>
                 <?php
-                    $marcas = array("Mazda", "Audi", "Honda", "Nissan, Volkswagen");
+                    $marcas = array("Mazda", "Audi", "Honda", "Nissan", "Volkswagen");
                     for($i = 0; $i <= 4; $i++)
                     {
                         echo '
