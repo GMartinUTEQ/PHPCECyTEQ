@@ -16,6 +16,24 @@
         <h2>Ejemplo de tablas en HTML</h2>
     </div>
     <div class="card">
+        <div class="card-header text-center">Este es un ejemplo de una tabla de un arreglo asociativo</div>
+            <div class="card-body">
+            <table class="table table-striped table-hover">
+                <!-- tr = Table Row -->
+                <tr class="table-info text-center">
+                    <!-- th = Table Header -->
+                    <th>
+                        Marcas de autos
+                    </th>
+                </tr>
+                <?php
+                    
+                ?>
+            </table>
+        </div> 
+    </div>
+    <br/>
+    <div class="card">
         <div class="card-header text-center">Este es un ejemplo de una tabla de un arreglo</div>
             <div class="card-body">
             <table class="table table-striped table-hover">
@@ -37,7 +55,6 @@
                 ?>
             </table>
         </div> 
-        
     </div>
     <br/>
     <div class="card">
