@@ -16,11 +16,11 @@
         <h2>Ejemplo de tablas en HTML</h2>
     </div>
     <div class="card">
-    <div class="card-header">Este es un ejemplo de una tabla</div>
+    <div class="card-header text-center">Este es un ejemplo de una tabla</div>
     <div class="card-body">
     <table class="table table-striped table-hover">
             <!-- tr = Table Row -->
-            <tr class="table-info">
+            <tr class="table-info text-center">
                 <!-- th = Table Header -->
                 <th>
                     Nombre
