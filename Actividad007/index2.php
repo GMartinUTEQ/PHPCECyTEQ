@@ -27,7 +27,35 @@
                     </th>
                 </tr>
                 <?php
-                    
+                    $marcas = [
+                                [
+                                    'Marca' => 'Mazda',
+                                    'Origen' => 'Japón',
+                                ],
+                                [
+                                    'Marca' => 'Audi',
+                                    'Origen' => 'Alemania',
+                                ],
+                                [
+                                    'Marca' => 'Honda',
+                                    'Origen' => 'Japón',
+                                ],
+                                [
+                                    'Marca' => 'Nissan',
+                                    'Origen' => 'Japón',
+                                ],
+                                [
+                                    'Marca' => 'VUHL',
+                                    'Origen' => 'México'
+                                ]
+                            ];
+
+                    foreach($marcas as $marca)
+                    {
+                        echo '
+                                <tr><td>' . $marca['Marca'] . '</td></tr>
+                            ';
+                    }
                 ?>
             </table>
         </div> 
