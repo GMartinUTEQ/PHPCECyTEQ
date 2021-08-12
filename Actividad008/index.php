@@ -39,7 +39,6 @@
 
         <?php
 
-            
             function suma($val1, $val2)
             {
                 $suma = $val1 + $val2;
@@ -51,6 +50,7 @@
             $valor2 = 23;
             $suma = suma($valor1, $valor2);
             echo "El valor de la suma de $valor1 y $valor2 = $suma";
+
         ?>
 
         <br>
@@ -90,7 +90,6 @@
             $resp = operacionarr($valores);
             echo "El resultado de la suma es:" . $resp[0];
             echo "<br/>El resultado de la resta es:" . $resp[1];
-
 
         ?>
     </body>
