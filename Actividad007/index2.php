@@ -25,6 +25,9 @@
                     <th>
                         Marcas de autos
                     </th>
+                    <th>
+                        Origen
+                    </th>
                 </tr>
                 <?php
                     $marcas = [
@@ -53,7 +56,10 @@
                     foreach($marcas as $marca)
                     {
                         echo '
-                                <tr><td>' . $marca['Marca'] . '</td></tr>
+                                <tr>
+                                    <td>' . $marca['Marca'] . '</td>
+                                    <td>' . $marca['Origen'] . '</td>
+                                </tr>
                             ';
                     }
                 ?>
