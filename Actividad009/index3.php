@@ -59,6 +59,7 @@ if(isset($_GET["idplantel"]))
   $clausula = " where plantel.idplantel = " . $_GET["idplantel"] . " ";
 }
 
+
 $cadena = "
             select 
             alumno.idalumno, alumno.nombrealumno, alumno.promedio
