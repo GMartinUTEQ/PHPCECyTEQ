@@ -22,19 +22,19 @@
        GET = Manda info a través de la URL del sitio. 
        POST = Manda la info de forma "Interna"
       -->
-      <a href="index2.php?idplantel=1">[Mostrar alumnos de Pinal] </a>
-      <a href="index2.php?idplantel=2"> [Mostrar alumnos de Peñamiller]</a>
-      <a href="index2.php">[Mostrar todos]</a>
+     
+     
+     
     </div>
     <div class="card-body">
 
-    <table class="table table-striped">
-        <tr>
-            <th>ID alumno</th>
-            <th>Nombre del alumno</th>
-            <th>Promedio</th>
-            <th>Plantel</th>
-        </tr>
+    
+    
+    
+    
+    
+    
+    
 <?php
 //Declaración de variables para conectar a mi base de datos.
 $servidor = "localhost";  //ip privada  ipconfig = 192.168.1.116 <- Ejemplo
@@ -52,59 +52,79 @@ if($conex->connect_error)
     die("Error al conectar: " . $conex->connect_error);
 }
 
-//Declaro la variable $cadena  y le asigno la sentencia que quiero ejecutar en la bd.
-$clausula = "";
-if(isset($_GET["idplantel"]))
+
+$planteles = "select * from plantel";
+$resultplantel = $conex->query($planteles);
+
+if($resultplantel->num_rows>0)
 {
-  $clausula = " where plantel.idplantel = " . $_GET["idplantel"] . " ";
-}
-
-
-$cadena = "
-            select 
-            alumno.idalumno, alumno.nombrealumno, alumno.promedio
-            , plantel.nombreplantel 
-            from alumno 
-            join plantel on plantel.idplantel = alumno.idplantel
-          " . $clausula;
-
-
-//Declaro la variable $resultado y le asigno lo que traiga la base de datos en la consulta que
-$resultado = $conex->query($cadena);
-
-//Resultado trae un conjunto de datos (Como un arreglo.)
-if($resultado->num_rows > 0)
-{
-    //Ciclo while para recorrer el conjunto de resultados fila por fila.
-    while($fila = $resultado->fetch_assoc())
+    
+    while($filaplantel = $resultplantel->fetch_assoc())
     {
+        $idplantel = " where plantel.idplantel = " . $filaplantel["idplantel"];
+        echo "<h3>Plantel: " . $filaplantel["nombreplantel"] . "</h3>";
+
+
+        $cadena = "
+        select 
+        alumno.idalumno, alumno.nombrealumno, alumno.promedio
+        , plantel.nombreplantel 
+        from alumno 
+        join plantel on plantel.idplantel = alumno.idplantel
+        " . $idplantel;
+
+
+        //Declaro la variable $resultado y le asigno lo que traiga la base de datos en la consulta que
+        $resultado = $conex->query($cadena);
+
+        //Resultado trae un conjunto de datos (Como un arreglo.)
+        if($resultado->num_rows > 0)
+        {
+        echo  '<table class="table table-striped">
+        <tr>
+        <th>ID alumno</th>
+        <th>Nombre del alumno</th>
+        <th>Promedio</th>
+        </tr>';
+        //Ciclo while para recorrer el conjunto de resultados fila por fila.
+        while($fila = $resultado->fetch_assoc())
+        {
+
         //Imprimo el idplantel concateno un  - e imprimo el nombre del plantel
         echo "<tr>
-                <td>" . $fila["idalumno"] . "</td>
-                <td>" . $fila["nombrealumno"] . "</td>
-                <td>" . $fila["promedio"] . "</td>
-                <td>" . $fila["nombreplantel"] . "</td>
-            </tr>";
+            <td>" . $fila["idalumno"] . "</td>
+            <td>" . $fila["nombrealumno"] . "</td>
+            <td>" . $fila["promedio"] . "</td>
+        </tr>";
+        }
+        echo "</table>";
+        }
+        else
+        {
+        //En caso contrario que la consulta no traiga ninguna fila, mostraré un mensaje.
+        echo "<h3>La consulta no trajo ningún registro</h3>";
+        }
+
+
+
     }
 }
-else
-{
-    //En caso contrario que la consulta no traiga ninguna fila, mostraré un mensaje.
-    echo "<h3>La consulta no trajo ningún registro</h3>";
-}
+
+
+
 //cierro mi conexión 
 $conex->close();
 
 
 
 ?>
-        </table>
+        
 
-        <div class="jumbotron">
-        <?php
-          echo $cadena;
-        ?>
-        </div>
+       
+       
+       
+       
+       
     </div> 
     
   </div>
