@@ -24,4 +24,13 @@ create table plantel(
 
 insert into plantel (idplantel, nombreplantel, telefonoplantel, direccionplantel) values(0, 'PINAL DE AMOLES', '4423254444', 'CAMINO A EPAZOTITOS S.N.');
 
-select * from plantel;
+select 
+alumno.idalumno, alumno.nombrealumno, alumno.promedio
+, plantel.nombreplantel 
+from alumno 
+join plantel on plantel.idplantel = alumno.idplantel
+
+inner JOIN
+left outer JOIN
+right outer JOIN
+left JOIN
