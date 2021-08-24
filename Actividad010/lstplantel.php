@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Lista de planteles</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -39,6 +39,7 @@
                         <tr>
                             <th>ID Plantel</th>
                             <th>Nombre plantel</th>
+                            <th>Eliminar</th>
                         </tr>
                         <?php
                             include("conexion.php");
@@ -59,6 +60,7 @@
                                     echo "<tr>
                                             <td>" . $fila["idplantel"] . "</td>
                                             <td>" . $fila["nombreplantel"] . "</td>
+                                            <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
                                         </tr>";
                                 }
                             }
