@@ -61,7 +61,7 @@
                                         <tr>
                                             <td>" . $fila["idplantel"] . "</td>
                                             <td>" . $fila["nombreplantel"] . "</td>
-                                            <td><a href='borraplantel.php?idp=" . $fila["idplantel"] . "'><i class='fas fa-trash-alt'></i></a></td>
+                                            <td><a onclick=\"return confirm(' Está seguro que desea eliminar el plantel " . $fila["nombreplantel"] ."');\" href='borraplantel.php?idp=" . $fila["idplantel"] . "'><i class='fas fa-trash-alt'></i></a></td>
                                         </tr>
                                         ";
                                 }
