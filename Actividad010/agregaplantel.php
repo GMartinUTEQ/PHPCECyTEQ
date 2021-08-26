@@ -1,22 +1,22 @@
 <?php
-    if(!isset($_REQUEST["idp"]))
+    if(!isset($_REQUEST["nombreplantel"]) || !isset($_REQUEST["telplantel"]) || !isset($_REQUEST["dirplantel"]))
     {
         
-        echo "<script>alert('Error, no se obtuvo ningún plantel para eliminar.');window.location.href='lstplantel.php';</script>";
+        echo "<script>alert('Error, no se obtuvo información del plantel.');window.location.href='lstplantel.php';</script>";
         die("Error");
     }
     
     include("conexion.php");
 
-    $cadena = "delete from plantel where idplantel = " . $_REQUEST["idp"];
+    $cadena = "insert into plantel values(0, '" . $_REQUEST["nombreplantel"] . "', '" . $_REQUEST["telplantel"] . "', '" . $_REQUEST["dirplantel"] . "');";
 
     if($conex->query($cadena) === TRUE)
     {
-        echo "<script>alert('Se eliminó el plantel satisfactoriamente.');window.location.href='lstplantel.php';</script>";
+        echo "<script>alert('Se agregó el plantel satisfactoriamente.');window.location.href='lstplantel.php';</script>";
     } 
     else
     {
-        echo "<script>alert('Oops. hubo un error al eliminar al plantel :V');window.location.href='lstplantel.php';</script>";
+        echo "<script>alert('Oops. hubo un error al crear al plantel :V');window.location.href='lstplantel.php';</script>";
     }
 
     $conex->close();
