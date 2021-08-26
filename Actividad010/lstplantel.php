@@ -57,11 +57,13 @@
                                 while($fila = $resultado->fetch_assoc())
                                 {
                                     //Imprimo el idplantel concateno un  - e imprimo el nombre del plantel
-                                    echo "<tr>
+                                    echo "
+                                        <tr>
                                             <td>" . $fila["idplantel"] . "</td>
                                             <td>" . $fila["nombreplantel"] . "</td>
-                                            <td><a href=''><i class='fas fa-trash-alt'></i></a></td>
-                                        </tr>";
+                                            <td><a href='borraplantel.php?idp=" . $fila["idplantel"] . "'><i class='fas fa-trash-alt'></i></a></td>
+                                        </tr>
+                                        ";
                                 }
                             }
                             else
@@ -71,6 +73,21 @@
                             }
                             //cierro mi conexión 
                             $conex->close();
+
+                            /*
+                            Métodos de envío de parámetros
+                            
+                            GET = Se manda a travéz de la URL
+                            Ejemplo = borraplantel.php?idp=1
+
+                            POST = Se manda internamente desde el REQUEST.
+                            <form method='post' action="borraplantel.php?idp=5">
+                                <input idplantel>
+                                <submit>
+                            </form>
+
+
+                            */
 
 
 
