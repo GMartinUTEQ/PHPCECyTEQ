@@ -35,7 +35,7 @@
                     <h3>Alta de plantel</h3>
                 </div>
                 <div class="card card-body">
-                    <form>  
+                    <form action="agregaplantel.php" method="post">  
                         <div class="form-group">
                             <label for="idplantel">Clave plantel:</label>
                             <input class="form-control" type="text" id="idplantel" name="idplantel" readonly value="0"/>
@@ -56,9 +56,6 @@
                         <div class="form-group">
                             <input type="submit" value="Guardar" class="btn btn-primary" >
                         </div>
-
-                        
-                        
                     </form>
                 </div>
             </div>
