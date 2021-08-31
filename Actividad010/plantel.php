@@ -31,7 +31,27 @@
         if(isset($_GET["idp"]))
         {
             $idplantel = $_REQUEST["idp"];
-            
+
+            include("conexion.php");
+
+            $sql = "select * from plantel where idplantel = " . $idplantel;
+
+            $resultado = $conex->query($sql);
+
+            if($resultado->num_rows>0)
+            {
+                while($fila = $resultado->fetch_assoc())
+                {
+                    $nombreplantel = $fila["nombreplantel"];
+                    $telplantel = $fila["telefonoplantel"];
+                    $direccionplantel = $fila["direccionplantel"];
+                    $btnguardar = "Actualizar";
+                }
+            }
+            else
+            {
+                //TODO: Error no se puede editar.
+            }
 
         }
 
