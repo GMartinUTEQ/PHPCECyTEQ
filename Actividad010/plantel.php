@@ -21,6 +21,21 @@
 
 <body>
 
+    <?php
+
+        $idplantel = "0";
+        $nombreplantel = "";
+        $telplantel = "";
+        $direccionplantel = "";
+        $btnguardar = "Guardar";
+        if(isset($_GET["idp"]))
+        {
+            $idplantel = $_REQUEST["idp"];
+            
+
+        }
+
+    ?>
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <?php include("menu.php"); ?>
