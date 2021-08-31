@@ -9,7 +9,7 @@
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Plantel</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
-                    <a href="#">Agregar</a>
+                    <a href="plantel.php">Agregar</a>
                 </li>
                 <li>
                     <a href="lstplantel.php">Lista</a>
