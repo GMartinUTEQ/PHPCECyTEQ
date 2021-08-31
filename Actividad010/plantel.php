@@ -78,7 +78,7 @@
                     <h3><?= $titulo ?></h3>
                 </div>
                 <div class="card card-body">
-                    <!-- En php la etiqueta < ?= suple la forma normal < ?php y acepta que no pongamos el simbolo de ;
+                    <!-- En php la etiqueta < ?= suple la forma normal < ?php y acepta que no pongamos el simbolo de ;-->
                     <form action="<?= $accion ?>" method="post"> 
 
 
@@ -100,6 +100,7 @@
                         </div>
 
                         <div class="form-group">
+                            <!-- En php la etiqueta < ?= suple la forma normal < ?php y acepta que no pongamos el simbolo de ;-->
                             <input type="submit" value="<?php echo $btnguardar; ?>" class="btn btn-primary" >
                         </div>
                     </form>
