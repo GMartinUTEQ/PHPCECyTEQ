@@ -28,10 +28,18 @@
         $telplantel = "";
         $direccionplantel = "";
         $btnguardar = "Guardar";
+        //
+        $accion = "agregaplantel.php";
+        $titulo = "Alta de plantel";
         if(isset($_GET["idp"]))
         {
             $idplantel = $_REQUEST["idp"];
 
+            //
+            $accion = "actualizaplante.php";
+            $titulo = "Actualiza plantel";
+
+            //
             include("conexion.php");
 
             $sql = "select * from plantel where idplantel = " . $idplantel;
@@ -70,26 +78,29 @@
                     <h3>Alta de plantel</h3>
                 </div>
                 <div class="card card-body">
+                    
                     <form action="agregaplantel.php" method="post">  
+
+
                         <div class="form-group">
-                            <label for="idplantel">Clave plantel:</label>
-                            <input class="form-control" type="text" id="idplantel" name="idplantel" readonly value="0"/>
+                            <label for="idplantel">Clave plantel:</label>                             
+                            <input class="form-control" type="text" id="idplantel" name="idplantel" readonly value="<?= $idplantel ?>"/>
                         </div>
                         <div class="form-group">
                             <label for="nombreplantel">Nombre plantel:</label>
-                            <input class="form-control" required type="text" id="nombreplantel" name="nombreplantel" />
+                            <input class="form-control" required type="text" id="nombreplantel" name="nombreplantel" value="<?= $nombreplantel ?>" />
                         </div>
                         <div class="form-group">
                             <label for="telplantel">Teléfono Plantel:</label>
-                            <input class="form-control" required type="text" id="telplantel" name="telplantel" placeholder="Ej. +52 4423 253 333" />
+                            <input class="form-control" required type="text" id="telplantel" name="telplantel" placeholder="Ej. +52 4423 253 333" value="<?= $telplantel ?>" />
                         </div>
                         <div class="form-group">
                             <label for="dirplantel">Dirección Plantel:</label>
-                            <input class="form-control" required type="text" id="dirplantel" name="dirplantel" placeholder="Incluir calle y número" />
+                            <input class="form-control" required type="text" id="dirplantel" name="dirplantel" placeholder="Incluir calle y número" value="<?= $direccionplantel ?>" />
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" value="Guardar" class="btn btn-primary" >
+                            <input type="submit" value="<?php echo $btnguardar; ?>" class="btn btn-primary" >
                         </div>
                     </form>
                 </div>
