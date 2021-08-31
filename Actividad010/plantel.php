@@ -36,7 +36,7 @@
             $idplantel = $_REQUEST["idp"];
 
             //
-            $accion = "actualizaplante.php";
+            $accion = "actualizaplantel.php";
             $titulo = "Actualiza plantel";
 
             //
@@ -75,11 +75,11 @@
             
             <div class="card">
                 <div class="card card-header">
-                    <h3>Alta de plantel</h3>
+                    <h3><?= $titulo ?></h3>
                 </div>
                 <div class="card card-body">
-                    
-                    <form action="agregaplantel.php" method="post">  
+                    <!-- En php la etiqueta < ?= suple la forma normal < ?php y acepta que no pongamos el simbolo de ;
+                    <form action="<?= $accion ?>" method="post"> 
 
 
                         <div class="form-group">
