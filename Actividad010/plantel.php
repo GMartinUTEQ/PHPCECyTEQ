@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+    $nomusu = $_SESSION["usuario"]; //$numusu = "Gabriel";
+    
+?>
 <!DOCTYPE html>
 <html>
 

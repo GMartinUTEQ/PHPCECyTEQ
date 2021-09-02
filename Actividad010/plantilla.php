@@ -23,21 +23,14 @@
 
     <div class="wrapper">
         <!-- Sidebar Holder -->
-        
+        <?php include("menu.php"); ?>
 
         <!-- Page Content Holder -->
         <div id="content">
 
+            <?php include("header.php"); ?>
             
-            
-            <div class="card">
-                <div class="card-header">
-                    Inicio de sesión
-                </div>
-                <div class="card-body">
-                    <a href="sesion.php" class="btn btn-primary">Entrar</a>
-                </div>
-            </div>
+            <!--body-->
         </div>
     </div>
 
