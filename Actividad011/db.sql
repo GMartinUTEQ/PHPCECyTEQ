@@ -10,13 +10,17 @@ create table menu
     preciopromocion decimal(20,2) not null default 0,
     activo int not null default 0,
     idcategoria int not null default 0,
-    idunidadmedida int not null default 0
+    idunidadmedida int not null default 0,
+    
 );
 
 insert into menu values(0, 'Ensada', 'Fresca ensalada con mix de verduras y aceite balsámico', 45, 75, 65, 1, 1, 1);
 insert into menu values(0, 'Arrache', '300 Grs. de arrachera a la parrilla bañada en mantequilla clarificada', 100, 150, 0, 1, 2, 2);
 insert into menu values(0, 'Crepas con helado', 'Crepa artesanal glaseada con dulce de leche y baileys con 1 bola de helado', 70, 140, 125, 1, 3, 2);
 insert into menu values(0, 'Coca light', 'Coca light con más hielos que coca', 12, 30, 25, 1, 4, 2);
+
+alter table menu add column urlfoto varchar(5000) not null default '';
+
 
 create table categoria(
     idcategoria int PRIMARY KEY auto_increment,
