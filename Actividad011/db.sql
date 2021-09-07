@@ -2,7 +2,7 @@ create database pedidos;
 
 create table menu
 (
-    idmenu PRIMARY KEY auto_increment,
+    idmenu int PRIMARY KEY auto_increment,
     nombre varchar(1024) not null default '',
     descripcion varchar(2048) not null default '',
     costo decimal(20,2) not null default 0,
@@ -14,11 +14,11 @@ create table menu
 );
 
 create table categoria(
-    idcategoria PRIMARY KEY auto_increment,
+    idcategoria int PRIMARY KEY auto_increment,
     nombrecategoria varchar(1024) not null default(0)
 );
 
 create table unidadmedida(
-    idunidadmedida PRIMARY KEY auto_increment,
+    idunidadmedida int PRIMARY KEY auto_increment,
     nombreunidadmedida varchar(1024) not null default(0)
 );
