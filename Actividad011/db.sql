@@ -18,7 +18,18 @@ create table categoria(
     nombrecategoria varchar(1024) not null default(0)
 );
 
+insert into categoria(0, 'Entradas');
+insert into categoria(0, 'Platos fuertes');
+insert into categoria(0, 'Postres');
+insert into categoria(0, 'Bebidas');
+
 create table unidadmedida(
     idunidadmedida int PRIMARY KEY auto_increment,
     nombreunidadmedida varchar(1024) not null default(0)
 );
+
+insert into unidadmedida(0, 'Porción');
+insert into unidadmedida(0, 'Chico (1 pers.)');
+insert into unidadmedida(0, 'Mediano (2 pers.)');
+insert into unidadmedida(0, 'Grande (3 pers.)');
+
