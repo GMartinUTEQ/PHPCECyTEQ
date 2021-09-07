@@ -50,19 +50,34 @@
                     
                     <?php
 
-                        $sql = "select * from menu inner join categoria on categoria.idcategoria = menu.idcategoria inner join unidadmedida on menu.idunidadmedida = unidadmedida.idunidadmedida;";
-                        $result = $conn->query($sql);
+                        include("conexion.php");
+
+                        $sql = "select * from menu inner join categoria on categoria.idcategoria = menu.idcategoria inner join unidadmedida on menu.idunidadmedida = unidadmedida.idunidadmedida";
+                        $result = $conex->query($sql);
 
                         if ($result->num_rows > 0) {
                         // output data of each row
                             while($row = $result->fetch_assoc()) {
+                                $preciopromocion = "";
+                                if($row["preciopromocion"] > 0)
+                                {
+                                    $preciopromocion = '
+                                        <span class="text-muted text-decoration-line-through">$' . $row["precio"] . '</span>
+                                        $' . $row["preciopromocion"] . '
+                                    ';
+                                }
+                                else
+                                {
+                                    $preciopromocion =  $row["precio"];
+                                }
+
                                 echo '<div class="col mb-5">
                                 <div class="card h-100">
-                                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">' . $row["nombrecategoria"] . '</div>
                                     <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Special Item</h5>
+                                            <h5 class="fw-bolder">' . $row["nombre"] . '</h5>
                                             <div class="d-flex justify-content-center small text-warning mb-2">
                                                 <div class="bi-star-fill"></div>
                                                 <div class="bi-star-fill"></div>
@@ -70,8 +85,7 @@
                                                 <div class="bi-star-fill"></div>
                                                 <div class="bi-star-fill"></div>
                                             </div>
-                                            <span class="text-muted text-decoration-line-through">$20.00</span>
-                                            $18.00
+                                            ' . $preciopromocion . '
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -83,12 +97,12 @@
                         } else {
                         echo "0 results";
                         }
-                        $conn->close();
+                        $conex->close();
 
                     ?>
 
 
-                    <div class="col mb-5">
+                    <!--div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
@@ -110,7 +124,7 @@
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     
                 </div>
             </div>

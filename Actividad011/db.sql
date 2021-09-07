@@ -21,6 +21,10 @@ insert into menu values(0, 'Coca light', 'Coca light con más hielos que coca', 
 
 alter table menu add column urlfoto varchar(5000) not null default '';
 
+update menu set urlfoto = 'https://xn--ensaladasnavideas-txb.com/wp-content/uploads/2018/04/28.-Ensalada-gourmet-300x225.jpg' where idmenu = 1;
+update menu set urlfoto = 'https://www.superama.com.mx/views/micrositio/recetas/images/parrillas/arracheraasada/Web_fotoreceta.jpg' where idmenu = 2;
+update menu set urlfoto = 'https://www.mdzol.com/u/fotografias/m/2021/6/4/f608x342-1065649_1095372_15.jpg' where idmenu = 3;
+update menu set urlfoto = 'https://www.coca-colamexico.com.mx/content/dam/journey/mx/es/private/sala-prensa/nocitas/enciende_tu_vida_con_cocacola_lighton.rendition.598.336.jpg' where idmenu = 4;
 
 create table categoria(
     idcategoria int PRIMARY KEY auto_increment,
