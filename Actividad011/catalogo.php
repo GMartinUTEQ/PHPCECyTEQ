@@ -27,7 +27,7 @@
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
-                            Cart
+                            Carrito
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
@@ -74,7 +74,7 @@
                                 echo '<div class="col mb-5">
                                 <div class="card h-100">
                                     <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">' . $row["nombrecategoria"] . '</div>
-                                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                                    <img class="card-img-top" src="' . $row["urlfoto"] . '" alt="..." />
                                     <div class="card-body p-4">
                                         <div class="text-center">
                                             <h5 class="fw-bolder">' . $row["nombre"] . '</h5>
@@ -89,7 +89,7 @@
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="producto.php?idp=' . md5($row["idmenu"]) . '">Ver más</a></div>
                                     </div>
                                 </div>
                             </div>';
