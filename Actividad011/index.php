@@ -57,12 +57,12 @@
                         <div class="col-lg-10 col-xl-7 mx-auto">
                             <h3 class="display-4">Pedidos.com</h3>
                             <p class="text-muted mb-4">Pide tu comida favorita.</p>
-                            <form>
+                            <form action="validalogin.php" method="post">
                                 <div class="form-group mb-3">
-                                    <input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    <input id="correo" name="correo" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input id="pass" name="pass" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Entrar</button>
