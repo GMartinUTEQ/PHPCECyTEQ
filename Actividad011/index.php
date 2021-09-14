@@ -30,7 +30,7 @@
 }
 
 .bg-image {
-  background-image: url('https://res.cloudinary.com/mhmd/image/upload/v1555917661/art-colorful-contemporary-2047905_dxtao7.jpg');
+  background-image: url('https://www.eluniversalqueretaro.mx/sites/default/files/2017/11/18/19_destinos_columna_principal_deckmans_valle_de_guadalupe_el_mogor_vinedos_restaurantes_chef_marco_beteta.jpg');
   background-size: cover;
   background-position: center center;
 }
@@ -55,8 +55,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-10 col-xl-7 mx-auto">
-                            <h3 class="display-4">Split page!</h3>
-                            <p class="text-muted mb-4">Create a login split page using Bootstrap 4.</p>
+                            <h3 class="display-4">Pedidos.com</h3>
+                            <p class="text-muted mb-4">Pide tu comida favorita.</p>
                             <form>
                                 <div class="form-group mb-3">
                                     <input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
@@ -64,11 +64,8 @@
                                 <div class="form-group mb-3">
                                     <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input id="customCheck1" type="checkbox" checked class="custom-control-input">
-                                    <label for="customCheck1" class="custom-control-label">Remember password</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
+                                
+                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Entrar</button>
                                 <div class="text-center d-flex justify-content-between mt-4"><p>Snippet by <a href="https://bootstrapious.com/snippets" class="font-italic text-muted"> 
                                         <u>Boostrapious</u></a></p></div>
                             </form>
