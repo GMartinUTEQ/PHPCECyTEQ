@@ -21,6 +21,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.php">Todo</a></li>
                         <?php
 
                             include("conexion.php");
@@ -40,13 +41,13 @@
                             {
                                while($fila = $resultado->fetch_assoc())
                                {
-                                   echo '';
+                                   echo '<li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.php?idc=' . $fila["idcategoria"] . '">' . $fila["nombrecategoria"] . '</a></li>';
                                } 
                             }
 
                         ?>
 
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Entradas</a></li>
+                        
                         
                     </ul>
                     <form class="d-flex">
@@ -75,9 +76,9 @@
                     
                     <?php
 
-                        include("conexion.php");
+                        
 
-                        $sql = "select * from menu inner join categoria on categoria.idcategoria = menu.idcategoria inner join unidadmedida on menu.idunidadmedida = unidadmedida.idunidadmedida";
+                        $sql = "select * from menu inner join categoria on categoria.idcategoria = menu.idcategoria inner join unidadmedida on menu.idunidadmedida = unidadmedida.idunidadmedida " . $filtro;
                         $result = $conex->query($sql);
 
                         if ($result->num_rows > 0) {
