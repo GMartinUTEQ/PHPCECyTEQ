@@ -21,8 +21,33 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <?php
+
+                            include("conexion.php");
+
+                            $filtro = "";
+
+                            if(isset($_REQUEST["idc"]))
+                            {
+                                $filtro = " where categoria.idcategoria = " . $_REQUEST["idc"];
+                            }
+
+                            $cadena = "select * from categoria";
+
+                            $resultado = $conex->query($cadena);
+
+                            if($resultado->num_rows > 0)
+                            {
+                               while($fila = $resultado->fetch_assoc())
+                               {
+                                   echo '';
+                               } 
+                            }
+
+                        ?>
+
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Entradas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Platos fuertes</a></li>
+                        
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
